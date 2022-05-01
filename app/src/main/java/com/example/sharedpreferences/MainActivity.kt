@@ -38,6 +38,12 @@ class MainActivity : AppCompatActivity() {
     }
     fun delete(view:View)
     {
+        getUsername=sharedPreferences.getString("user","")
+        if(getUsername!=null)
+        {
+            textView.text="Kaydedilen Değer:"
+            sharedPreferences.edit().remove("user")
+        }
 
     }
 }
